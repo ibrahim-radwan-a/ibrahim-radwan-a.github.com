@@ -1,0 +1,365 @@
+/* Typographie et paramètres de base */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Palette de couleurs */
+:root {
+    --primary-color: #000; /* Noir audacieux */
+    --secondary-color: #fff; /* Blanc épuré */
+    --accent-color: #ff2d55; /* Rouge audacieux pour attirer l’attention */
+    --gray-color: #f5f5f5; /* Fond gris doux */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Sections générales */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--gray-color);
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 20px auto 0;
+}
+
+/* Grille Responsive */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* À propos */
+#about {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-align: left;
+    padding: 100px 40px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Parcours Scolaire */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-item {
+    background: var(--secondary-color);
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.timeline-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Projets */
+.project {
+    flex: 1 1 calc(33.333% - 20px);
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}                                                               
+/* Certifications */
+.certification-item {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.certification-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Compétences */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+#skills ul li {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact-info, .contact-form {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+}
+
+.contact-info p, .contact-info a {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form form button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+/* Section BTS SIO */
+#bts-sio {
+    padding: 80px 20px;
+    background-color: #f5f5f5; /* Couleur de fond neutre et épurée */
+    color: #111; /* Texte foncé pour un contraste fort */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.bts-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bts-text {
+    flex: 1 1 55%;
+    text-align: left;
+}
+
+.bts-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111;
+    text-transform: uppercase; /* Style Nike : textes en majuscules */
+}
+
+.bts-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555; /* Gris doux pour une meilleure lisibilité */
+}
+
+.bts-text ul {
+    list-style: none; /* Suppression des puces */
+    margin: 20px 0;
+    padding-left: 0;
+}
+
+.bts-text li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    position: relative;
+    color: #111;
+}
+
+.bts-text li::before {
+    content: "•"; /* Point stylisé comme une puce */
+    font-size: 1.5rem;
+    color: #ff1e00; /* Rouge vibrant pour un accent */
+    position: absolute;
+    left: -25px;
+    top: 0;
+}
+
+.bts-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.bts-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bts-image img:hover {
+    transform: scale(1.05); /* Effet zoom doux au survol */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bts-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .bts-text {
+        text-align: center;
+    }
+    .bts-text h2 {
+        font-size: 2rem;
+    }
+    .bts-text p {
+        font-size: 1rem;
+    }
+    .bts-image img {
+        max-width: 300px;
+    }
+    .bts-image {
+        text-align: center; /* Centre l'image horizontalement */
+        margin: 40px 0; /* Ajoute de l'espace autour de l'image */
+    }
+    
+    .bts-image img {
+        width: 100%; /* L'image s'ajuste à la largeur du conteneur */
+        max-width: 600px; /* Limite la largeur de l'image */
+        height: auto; /* Maintient les proportions de l'image */
+        border-radius: 10px; /* Coins arrondis pour une meilleure présentation */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce pour donner de la profondeur */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+    }
+    
+    /* Effet au survol de l'image */
+    .bts-image img:hover {
+        transform: scale(1.05); /* Agrandissement léger au survol */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+    }
+    
